@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import { Button, RadioGroup, Radio, FormControlLabel, FormControl, InputLabel, Select, MenuItem, Box, Modal } from '@mui/material';
 import Slide from '@mui/material/Slide';
 import IconButton from '@mui/material/IconButton';
@@ -9,7 +9,7 @@ import toast from 'react-hot-toast';
 import { useSelector } from "react-redux";
 import API from '../../../services/API';
 
-const Transition = React.forwardRef(function Transition(props, ref) {
+const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 

@@ -29,7 +29,7 @@ const Donar = () => {
 
 
   const columns = [
-    { id: `${'name' || 'organisationName' + " (ORG)"}`, label: 'Name', minWidth: 170 },
+    { id: `${'name' || 'organisationName'}`, label: 'Name (ORG)', minWidth: 170 },
     { id: 'email', label: 'Email', minWidth: 100 },
     { id: 'phone', label: 'Phone', minWidth: 100 },
     {

@@ -13,26 +13,25 @@ const Consumer = () => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   //find donar records
-  const getDonars = async () => {
-    try {
-      const { data } = await API.post("/inventory/get-inventory-hospital", {
-        filters: {
-          inventoryType: "out",
-          hospital: user?._id,
-        },
-      });
-      if (data?.success) {
-        setData(data?.inventory);
-        // console.log(data);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const getDonars = async () => {
+      try {
+        const { data } = await API.post("/inventory/get-inventory-hospital", {
+          filters: {
+            inventoryType: "out",
+            hospital: user?._id,
+          },
+        });
+        if (data?.success) {
+          setData(data?.inventory);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     getDonars();
-  }, []);
+  }, [user]);
 
   const columns = [
     { id: 'bloodGroup', label: 'Blood Group', minWidth: 170 },

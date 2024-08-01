@@ -1,6 +1,5 @@
 
-import * as React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -12,8 +11,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import Sidebar from './Sidebar';
 
-const Mobile_Information=()=> {
-  const [open, setOpen] = React.useState(false);
+const MobileInformation=()=> {
+  const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -48,4 +47,4 @@ const Mobile_Information=()=> {
 
 
 
-export default Mobile_Information;
+export default MobileInformation;

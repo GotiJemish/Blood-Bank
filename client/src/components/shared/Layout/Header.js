@@ -3,7 +3,7 @@ import React from 'react';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Mobile_Information from './Mobile-Information';
+import MobileInformation from './Mobile-Information';
 const Header = () => {
 
   const logoStyle = {
@@ -45,7 +45,7 @@ const Header = () => {
               alt="website's logo"
             />
           </Button>
-          <Mobile_Information />
+          <MobileInformation />
         </Box>
 
       </Box>
