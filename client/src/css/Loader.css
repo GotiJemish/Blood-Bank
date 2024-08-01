@@ -1,0 +1,69 @@
+.loader-container, .circle-container {
+    transform: translate(-50%, -50%);
+}
+
+.loader-container {
+    
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+.loader-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.circle-container {
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: animation 1s infinite ease-in-out;
+}
+
+.red {
+    background-color: rgb(220, 53, 69);
+    animation-delay: 0s;
+}
+
+.blue {
+    background-color: rgb(13, 110, 253);
+    animation-delay: 0.25s;
+}
+
+.green {
+    background-color: rgb(25, 135, 84);
+    animation-delay: 0.5s;
+}
+
+.yellow {
+    background-color: rgb(255, 193, 7);
+    animation-delay: 0.75s;
+}
+
+@keyframes animation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
